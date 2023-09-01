@@ -13,7 +13,7 @@ Mr. Berg will look at all your files to determine what you have completed.  If t
 ## Reflection Questions
 
 1. What is your initial thoughts about the python programming language?
-
+ 
 
 
 2. Describe some similarities and differences that you found between python and other programming languages you have used in the past?
