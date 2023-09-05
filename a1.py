@@ -39,9 +39,9 @@ def factorial(n: int) -> int:
  x=n
  y=n
 while x>1:
-    y=y*(x-1)
     x=x-1
-    return y
+    y=y*(x)
+ return y
     
 
 
@@ -57,10 +57,13 @@ while x>1:
 # T = TypeVar("T")
 
 
-# def every_other(lst: List[T]) -> List[T]:
+def every_other(lst: List[T]) -> List[T]:
 #     """Takes a list and returns a list of every other element in the list, starting with
 #     the first.
-
+   x=0
+    For r in range(len(List[T]))
+    if x%2==0 && x!=0
+      
 #     Args:
 #         lst - a list of any (constrained by type T to be the same type as the returned
 #             list)

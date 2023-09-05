@@ -93,8 +93,8 @@ lane_tech = ["chicago", "high school", 1908, 60618, "addison/western"]
 # print(dinner)
 
 # # f String
-# age = 25
-# # print("Mary is " + age + " years old")
-# print(f"Mary is {age} years old")
+age = 25
+print("Mary is " + str(age) + " years old")
+print(f"Mary is {age} years old")
 
 # print(absolute(-6))
