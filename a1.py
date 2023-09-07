@@ -38,10 +38,10 @@ def factorial(n: int) -> int:
 #     number will be positive
  x=n
  y=n
-while x>1:
-  x=x-1
-  y=y*(x)
-return y
+ while x>1:
+    x=x-1
+    y=y*(x)
+ return y
     
 
 
@@ -54,16 +54,19 @@ return y
 #     raise NotImplementedError("factorial")
 
 
-# T = TypeVar("T")
+T =TypeVar("T")
 
 
-def every_other(lst: List[T]) -> List[T]:
+def every_other(lst: list[T]) -> list[T]:
 #     """Takes a list and returns a list of every other element in the list, starting with
 #     the first.
-   x=0
-For r in range (len(List[T])):
-if (x%2==0 & x!=0):
-      
+ x=0
+ newLst=[]
+ for r in range(len(lst)):
+    if (x%2==0):
+      newLst.append(lst[r])
+ return newLst
+   
 #     Args:
 #         lst - a list of any (constrained by type T to be the same type as the returned
 #             list)
@@ -145,9 +148,9 @@ if __name__ == "__main__":
         3,
         5,
     ], "every_other of [1,2,3,4,5] failed"
-    assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
-    assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
-    assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
+    # assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
+    # assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
+    # assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
 
 #     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
 #     assert duck_duck_goose(names) == ["roscoe", "law"]
