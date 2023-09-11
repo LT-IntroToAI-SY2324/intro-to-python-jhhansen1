@@ -12,7 +12,7 @@
 # check, if you do not complete the generative AI portion of the assignment.
 # """
 
-# from typing import List, TypeVar
+from typing import List, TypeVar
 
 
 def absolute(n: int) -> int:
@@ -54,7 +54,7 @@ def factorial(n: int) -> int:
 #     raise NotImplementedError("factorial")
 
 
-T=TypeVar("T")
+T = TypeVar("T")
 
 
 def every_other(lst: list[T]) -> list[T]:
@@ -78,46 +78,49 @@ def every_other(lst: list[T]) -> list[T]:
 
 
 def sum_list(lst: List[int]) -> int:
-#     """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
-#     use the built in function `sum`.
+    """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
+    use the built in function `sum`.
 
-#     Args:
-#         lst - a list of numbers
+    Args:
+        lst - a list of numbers
 
-#     Returns:
-#         the sum of the passed in list
-#     """
-s=0
-for x in lst:
-   s+=x
-return s 
-
-
-# def mean(lst: List[int]) -> float:
-#     """Takes a list of numbers, and returns the mean of the numbers.
-
-#     Args:
-#         lst - a list of numbers
-
-#     Returns:
-#         the mean of the passed in list
-#     """
-#     raise NotImplementedError("mean")
+    Returns:
+        the sum of the passed in list
+    """
+    s=0
+    for x in lst:
+        s+=x
+    return s 
 
 
-# def median(lst: List[int]) -> float:
-#     """Takes an ordered list of numbers, and returns the median of the numbers.
+def mean(lst: List[int]) -> float:
+    """Takes a list of numbers, and returns the mean of the numbers.
 
-#     If the list has an even number of values, it computes the mean of the two center
-#     values.
+    Args:
+        lst - a list of numbers
 
-#     Args:
-#         lst - an ordered list of numbers
+    Returns:
+        the mean of the passed in list
+    """
+    x=0
+    for el in lst:
+        x+=el
+    x=x/len(lst)
 
-#     Returns:
-#         the median of the passed in list
-#     """
-#     raise NotImplementedError("median")
+
+def median(lst: List[int]) -> float:
+    """Takes an ordered list of numbers, and returns the median of the numbers.
+
+    If the list has an even number of values, it computes the mean of the two center
+    values.
+
+    Args:
+        lst - an ordered list of numbers
+
+    Returns:
+        the median of the passed in list
+    """
+    
 
 
 # def duck_duck_goose(lst: List[str]) -> List[str]:
