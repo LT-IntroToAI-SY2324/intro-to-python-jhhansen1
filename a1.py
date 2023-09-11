@@ -54,7 +54,7 @@ def factorial(n: int) -> int:
 #     raise NotImplementedError("factorial")
 
 
-T =TypeVar("T")
+T=TypeVar("T")
 
 
 def every_other(lst: list[T]) -> list[T]:
@@ -77,7 +77,7 @@ def every_other(lst: list[T]) -> list[T]:
 #     raise NotImplementedError("every_other")
 
 
-# def sum_list(lst: List[int]) -> int:
+def sum_list(lst: List[int]) -> int:
 #     """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
 #     use the built in function `sum`.
 
@@ -87,7 +87,10 @@ def every_other(lst: list[T]) -> list[T]:
 #     Returns:
 #         the sum of the passed in list
 #     """
-#     raise NotImplementedError("sum_list")
+s=0
+for x in lst:
+   s+=x
+return s 
 
 
 # def mean(lst: List[int]) -> float:
