@@ -120,30 +120,46 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
+    medianValue=0
+    if len(list)%2!=0:
+     medianValue=lst[len(list)/2]
+    if len(list)%2==0:
+     medianValue=(lst[len(list)/2]+lst[len(list)/2+1])/2
+    return medianValue
+
+
+def duck_duck_goose(lst: List[str]) -> List[str]:
+    """Given an list of names (strings), play 'duck duck goose' with it, knocking out
+    every third name (wrapping around) until only two names are left.
+
+    In other words, when you hit the end of the list, wrap around and keep counting from
+    where you were.
+
+    For example, if given this list ['Nathan', 'Sasha', 'Sara', 'Jennie'], you'd first
+    knock out Sara. Then first 'duck' on Jennie, wrap around to 'duck' on Nathan and
+    'goose' on Sasha - knocking him out and leaving only Nathan and Jennie.
+
+    You may assume the list has 3+ names to start
+
+    Args:
+        lst - a list of names (strings)
+
+    Returns:
+        the resulting list after playing duck duck goose
+    """
     
+    while (len(lst)>2):
+       x=0
+       for i in range(3):
+        x+=1
+        if x%3==0:
+           del lst[i]
+        # still need to work on this one
+           
+          
+          
 
-
-# def duck_duck_goose(lst: List[str]) -> List[str]:
-#     """Given an list of names (strings), play 'duck duck goose' with it, knocking out
-#     every third name (wrapping around) until only two names are left.
-
-#     In other words, when you hit the end of the list, wrap around and keep counting from
-#     where you were.
-
-#     For example, if given this list ['Nathan', 'Sasha', 'Sara', 'Jennie'], you'd first
-#     knock out Sara. Then first 'duck' on Jennie, wrap around to 'duck' on Nathan and
-#     'goose' on Sasha - knocking him out and leaving only Nathan and Jennie.
-
-#     You may assume the list has 3+ names to start
-
-#     Args:
-#         lst - a list of names (strings)
-
-#     Returns:
-#         the resulting list after playing duck duck goose
-#     """
-#     raise NotImplementedError("duck_duck_goose")
-
+      
 
 # # this line causes the nested code to be skipped if the file is imported instead of run
 if __name__ == "__main__":
@@ -154,9 +170,9 @@ if __name__ == "__main__":
         3,
         5,
     ], "every_other of [1,2,3,4,5] failed"
-    # assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
-    # assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
-    # assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
+    assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
+    assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
+    assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
 
 #     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
 #     assert duck_duck_goose(names) == ["roscoe", "law"]
