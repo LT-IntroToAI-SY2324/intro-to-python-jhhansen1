@@ -106,6 +106,7 @@ def mean(lst: List[int]) -> float:
     for el in lst:
         x+=el
     x=x/len(lst)
+    return x
 
 
 def median(lst: List[int]) -> float:
@@ -121,10 +122,10 @@ def median(lst: List[int]) -> float:
         the median of the passed in list
     """
     medianValue=0
-    if len(list)%2!=0:
-     medianValue=lst[len(list)/2]
-    if len(list)%2==0:
-     medianValue=(lst[len(list)/2]+lst[len(list)/2+1])/2
+    if len(lst)%2!=0:
+     medianValue=lst[len(lst)/2]
+    if len(lst)%2==0:
+     medianValue=(lst[len(lst)/2]+lst[len(lst)/2-1])/2
     return medianValue
 
 
@@ -147,14 +148,15 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    
-    while (len(lst)>2):
-       x=0
+    counter=0
+    while (len(lst)>2): 
        for i in range(3):
-        x+=1
-        if x%3==0:
-           del lst[i]
-        # still need to work on this one
+        counter+=1
+        if counter>=len(lst):
+           counter=0
+    del(lst[counter])
+    return lst
+    
            
           
           
@@ -174,7 +176,7 @@ if __name__ == "__main__":
     assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
 
-#     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
-#     assert duck_duck_goose(names) == ["roscoe", "law"]
+    names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
+    assert duck_duck_goose(names) == ["roscoe", "law"]
 
-#     print("All tests passed!")
+    print("All tests passed!")
