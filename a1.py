@@ -63,7 +63,7 @@ def every_other(lst: list[T]) -> list[T]:
  x=0
  newLst=[]
  for r in range(len(lst)):
-    if (x%2==0):
+    if (r%2==0):
       newLst.append(lst[r])
  return newLst
    
@@ -123,9 +123,9 @@ def median(lst: List[int]) -> float:
     """
     medianValue=0
     if len(lst)%2!=0:
-     medianValue=lst[len(lst)/2]
+     medianValue=lst[len(lst)//2]
     if len(lst)%2==0:
-     medianValue=(lst[len(lst)/2]+lst[len(lst)/2-1])/2
+     medianValue=(lst[len(lst)//2]+lst[len(lst)//2-1])//2
     return medianValue
 
 
@@ -151,12 +151,12 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     counter=0
     while (len(lst)>2): 
        for i in range(3):
-        counter+=1
+         counter+=1
         if counter>=len(lst):
            counter=0
-    del(lst[counter])
+       del(lst[counter])
     return lst
-    
+    # Indents are wrong I think
            
           
           
