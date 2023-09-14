@@ -152,11 +152,11 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     while (len(lst)>2): 
        for i in range(3):
          counter+=1
-        if counter>=len(lst):
+         if counter>=len(lst):
            counter=0
        del(lst[counter])
     return lst
-    # Indents are wrong I think
+    
            
           
           
